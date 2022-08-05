@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Daniel Oliveira</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="My Portfolio Site"/>
+  <link rel="stylesheet" href="./css/style.css" media="all" rel="preload"/>
+  <script src="https://kit.fontawesome.com/c520c9f943.js" crossorigin="anonymous" async="async"></script>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf5Nx4hAAAAALN8ALsnizajR3jptPCYkXeio9ph" async="async"></script>
+  <script>
+    function onSubmit(e) {
+      e.preventDefault();
+      grecaptcha.enterprise.execute('6Lf5Nx4hAAAAALN8ALsnizajR3jptPCYkXeio9ph', {action: 'submit'}).then((token) => {
+        const quoteForm = document.getElementById("quoteForm");
+        quoteForm.elements['g-recaptcha-response'].value = token;
+        quoteForm.submit();
+      });
+      return false;
+    }
+  </script>
+ </head>
+ <body>
+  <header>
+  </header>
