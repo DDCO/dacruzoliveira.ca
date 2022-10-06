@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "ScopeOne";
+    src: url("../fonts/ScopeOne-Regular.ttf") format("truetype");
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "ScopeOne";
+}
+img {
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    margin-bottom: 15px;
+}
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0 4px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    color: #000;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+button {
+    padding: 18px 30px;
+    color: white;
+    background-color: #a8a6a1;
+    border: none;
+}
+.font-lg {
+    font-size: calc(2.8 * 1rem);
+}
+.font-md {
+    font-size: calc(2 * 1rem);
+}
+.font-sm {
+    font-size: auto;
+}
+.italic {
+    font-style: italic;
+}
+.row {
+    display: flex;
+}
+.row.gap {
+    gap: 15px;
+    row-gap: 15px;
+}
+.col-10 {
+    flex: 1 1 100%;
+}
+.col-9 {
+    flex: 1 1 90%;
+}
+.col-8 {
+    flex: 1 1 80%;
+}
+.col-7 {
+    flex: 1 1 70%;
+}
+.col-6 {
+    flex: 1 1 60%;
+}
+.col-5 {
+    flex: 1 1 50%;
+}
+.col-4 {
+    flex: 1 1 40%;
+}
+.col-3 {
+    flex: 1 1 30%;
+}
+.col-2 {
+    flex: 1 1 20%;
+}
+.col-1 {
+    flex: 1 1 10%;
+}
+body > header, body > section, body > footer {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+body > :nth-child(2) {
+    padding-top: 130px;
+}
+header {
+    line-height: 130px;
+    background-color: #38383b;
+    height: 130px;
+    color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+header .menu {
+    text-align: center;
+}
+header .social {
+    font-size: 22px;
+}
+header a, header a:active {
+    color: white;
+    text-decoration: none;
+}
+header .social a, header .social a:active {
+    padding: 0 5px;
+}
+section {
+    background-color: #38383b;
+    color: white;
+    padding-bottom: 200px;
+}
+section#intro > .col-7 {
+    padding-top: 230px;
+}
+section#contact {
+    padding-top: 300px;
+}
+section#contact > .fields .row {
+    margin-bottom: 20px;
+}
+footer {
+    padding-top: 100px;
+    background-color: #dfe0e1;
+    height: 340px;
+}
+footer .message {
+    color: black;
+}
+footer .social {
+    font-size: 22px;
+}
+footer a, footer a:active {
+    color: black;
+}
+footer .social a, footer .social a:active {
+    padding: 0 5px;
+}
