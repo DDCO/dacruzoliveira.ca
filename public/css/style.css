@@ -39,7 +39,7 @@ button {
     font-size: calc(2 * 1rem);
 }
 .font-sm {
-    font-size: auto;
+    font-size: calc(1 * 1rem);
 }
 .italic {
     font-style: italic;
@@ -103,7 +103,7 @@ header .menu {
 header .social {
     font-size: 22px;
 }
-header a, header a:active {
+header a, header a:active, section a, section:active {
     color: white;
     text-decoration: none;
 }
