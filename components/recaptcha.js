@@ -2,6 +2,10 @@ const { RecaptchaEnterpriseServiceClient } = require('@google-cloud/recaptcha-en
 const config = require('../config/recaptcha');
 
 async function requestAssessment (req) {
+  if (!config.GOOGLE_RECAPTCHA_ENABLED) {
+    return 0.7;
+  }
+
   const client = new RecaptchaEnterpriseServiceClient({
     credentials: {
       client_email: config.GOOGLE_RECAPTCHA_EMAIL,

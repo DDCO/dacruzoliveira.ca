@@ -74,12 +74,12 @@ app.post('/contact', async (req, res) => {
     transporter.sendMail({
       from: `${req.body.email}`, // sender address
       to: sendinblueConfig.to, // list of receivers
-      subject: "Build Request", // Subject line
-      html: `${req.body.comment}`
+      subject: `${req.body.subject}`, // Subject line
+      html: `${req.body.message}<br/>${req.body.firstname} ${req.body.lastname}`
     });
     // Set cache control header
     res.set('Cache-control', 'public, max-age=300');
-    res.render('thanks', {});
+    res.render('home', {});
   }
   catch (ex) {
     res.status(500).send(ex);
