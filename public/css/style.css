@@ -141,3 +141,13 @@ footer a, footer a:active {
 footer .social a, footer .social a:active {
     padding: 0 5px;
 }
+.animate{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+.animate.active{
+    transform: translateY(0);
+    opacity: 1;
+}
