@@ -22,6 +22,6 @@ spec:
         lifecycle:
             postStart:
               exec:
-                command: ["/bin/sh", "-c", "apt-get update && apt-get install git -y && cd /usr/share/nginx/html && git clone https://github.com/DDCO/dacruzoliveira.ca.git"]
+                command: ["/bin/sh", "-c", "apt-get update && apt-get install git -y && cd /usr/share/nginx/html && rm * && git clone -q https://github.com/DDCO/dacruzoliveira.ca.git ."]
     
       
