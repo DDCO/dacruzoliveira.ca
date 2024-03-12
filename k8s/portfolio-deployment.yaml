@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio
+  labels:
+    app: portfolio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portfolio
+  template:
+    metadata:
+      labels:
+        app: portfolio
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        lifecycle:
+            postStart:
+              exec:
+                command: ["/bin/sh", "-c", "apt-get update && apt-get install git -y && cd /usr/share/nginx/html && git clone https://github.com/DDCO/dacruzoliveira.ca.git"]
+    
+      
